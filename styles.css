@@ -1,0 +1,389 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #db34db, #aacc2e);
+}
+
+.game-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.game-container {
+    text-align: center;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.restart-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ffeb3b;
+    color: #3498db;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.restart-btn:hover {
+    background-color: #2ecc71;
+    color: #fff;
+}
+/* ... previous styles ... */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+/* ... previous styles ... */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+#winnerText {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#newGameBtn {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#newGameBtn:hover {
+    background-color: #27ae60;
+}
+/* Add this to your styles.css file */
+/* Add this to your styles.css file */
+.scores {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+#playerScore, #computerScore {
+    margin: 0;
+    padding: 10px;
+    background-color: #db3434;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#computerScore {
+    background-color: #e74c3c;
+}
+/* Add this to your styles.css file */
+.container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #fff;
+    color: #ffcc00; /* Dark Yellow */
+    border: 2px solid #ecf0f1;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Cursive', sans-serif; /* Custom font */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.cell:hover {
+    background-color: #ecf0f1;
+    color: #ffeb3b; /* Lighter shade of yellow on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.restart-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.restart-btn:hover {
+    background-color: #27ae60;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+#winnerText {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#newGameBtn {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#newGameBtn:hover {
+    background-color: #27ae60;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left:
+}
+
+/* Add this style to your existing CSS or create a new CSS file */
+
+#playerNames {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#player1Label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+#player1 {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+#startGameBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: violet;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startGameBtn:hover {
+    border-color: #ffeb3b;
+    border-style: solid;
+    background-color: #ff01ff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style for X and O buttons in the symbol choice modal */
+#chooseXBtn,
+#chooseOBtn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#chooseXBtn:hover,
+#chooseOBtn:hover {
+    background-color: #45a049;
+}
+
+/* Style for name entry modal */
+#nameEntryModal input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+#nameEntryModal button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nameEntryModal button:hover {
+    background-color: #45a049;
+}
